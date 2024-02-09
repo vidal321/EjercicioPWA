@@ -71,7 +71,7 @@ self.addEventListener('activate',e=> {
 //checa si ya tienes los recursos en cache y sino los solicita.
 self.addEventListener('fetch',e => {
     e.respondWitch(
-        catches.match(e.request)
+        caches.match(e.request)
             .then(res => {
                 if(res){
                     //devuelvo datosdesde cache
